@@ -1,0 +1,138 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@100..700&family=Kameron:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kameron:wght@400..700&display=swap');
+
+
+$primaryFont: "Kalina";
+$secondaryFont: "Kameron";
+// -------------------------
+$primaryColor: #954535;
+$secondaryColor: #ddb094;
+
+body {
+    font-family: $primaryFont !important;
+    background-color: #fbf6f1 !important;
+    // background-color: rgb(246, 244, 242) !important;
+}
+
+a {
+    text-decoration: none !important;
+    color: $primaryColor !important;
+}
+
+.btn {
+    &-primary {
+        background: $primaryColor !important;
+        border: none !important;
+        border-radius: 20px !important;
+    }
+
+    &-secondary {
+        background-color: $secondaryColor !important;
+        border: none !important;
+        border-radius: 20px !important;
+    }
+}
+
+.topNav {
+    font-family: $secondaryFont;
+}
+
+nav {
+    a {
+        &:hover {
+            color: $primaryColor !important;
+            text-decoration: underline !important;
+        }
+
+        &.active {
+            font-weight: bold !important;
+            text-decoration: underline !important;
+            color: $primaryColor !important;
+            font-size: large !important;
+        }
+    }
+}
+.title {
+    color: $primaryColor;
+}
+header {
+
+    .header__images {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+
+        #imgBig {
+            width: 22rem;
+            border-radius: 50%;
+            align-self: flex-start;
+            justify-self: flex-start;
+        }
+
+        #imgMid {
+            width: 13rem;
+            border-radius: 50%;
+            align-self: flex-end;
+            justify-self: flex-end;
+        }
+
+        #halal {
+            position: absolute;
+            top: 85%;
+            left: 32%;
+            animation: jumping ease-out 4s infinite;
+        }
+    }
+
+}
+
+@keyframes jumping {
+    0% {
+        top: 82%;
+    }
+
+    50% {
+        top: 85%;
+    }
+
+    100% {
+        top: 82%;
+    }
+}
+
+.topList {
+
+    .card {
+        position: relative;
+        padding-top: 8rem;
+        border: none;
+        box-shadow: rgba(179, 102, 102, 0.883);
+        // background-color: #baa9a51d;
+        background-color: #f5e9df;
+
+        img {
+            border-radius: 50%;
+            width: 19rem;
+            height: 19rem;
+            object-fit: cover;
+            position: absolute;
+            top: -11rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        p {
+            font-family: $secondaryFont;
+        }
+
+        .rateAndPrice {
+            font-family: $secondaryFont;
+
+            .bi-star-fill {
+                color: gold;
+            }
+        }
+    }
+}
